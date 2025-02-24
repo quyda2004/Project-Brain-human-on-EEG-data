@@ -14,3 +14,7 @@ Chia làm 3 giai đoạn:
 - 10 phút đầu: Người tham gia tập trung giám sát đoàn tàu.
 - 10 phút giữa: Người tham gia ngừng chú ý nhưng vẫn tỉnh táo.
 - 10 phút cuối: Người tham gia thư giãn và có thể ngủ gật.
+
+  Sau khi huấn luyện mô hình chạy khá tốt thì chúng tôi phát hiện rằng chuẩn tôi đã bị vấn đề ở bước
+  phân chia dữ liệu để huấn luyện, vấn đề đó là hiện tượng leakdata. Nói dễ hiểu hơn thì là dữ liệu có trong tập
+  train cũng có trong tập test. Chúng tôi đã khắc phục và chạy lại mô hình và các mô hình tập trung trong khoảng 60%

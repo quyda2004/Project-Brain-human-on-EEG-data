@@ -85,6 +85,27 @@ https://www.kaggle.com/datasets/inancigdem/eeg-data-for-mental-attention-state-d
 ### 4.3 CNN:
 <img width="527" height="488" alt="image" src="https://github.com/user-attachments/assets/b8c43909-492c-40de-914a-489cc5df1389" />
 
+## 5) Kết luận
 
+### Nội dung nghiên cứu:
+- Phát triển EEG BCI thụ động để theo dõi và phân loại ba trạng thái tinh thần: chú ý thụ động, thảnh thơi, và buồn ngủ.
+- Sử dụng mô hình SVM đạt kết quả phân loại:
+  - Tốt nhất: **98.93%**
+  - Trung bình: **97.13%**
+
+### Ứng dụng tiềm năng:
+- **An toàn người lái xe:** Phát hiện trạng thái không tập trung hoặc buồn ngủ để cảnh báo.
+- **Ứng dụng lâm sàng:** Theo dõi trạng thái tinh thần bệnh nhân, mở rộng theo dõi độ sâu gây mê dựa trên EEG.
+- **Khái quát hóa:** Cơ sở phát triển hệ thống giám sát trạng thái tinh thần trong nhiều lĩnh vực (an ninh, y tế...).
+
+### Ý nghĩa đặc biệt:
+- Phương pháp phân tích tín hiệu EEG cung cấp cái nhìn mới về biểu diễn trạng thái tinh thần.
+- Tiềm năng ứng dụng thực tiễn trong an toàn và giám sát sức khỏe.
+
+---
+
+## 6) Tài liệu tham khảo
+
+- [Distinguishing mental attention states of humans via an EEG-based passive BCI using Machine Learning Methods](https://www.researchgate.net/publication/333499959_Distinguishing_mental_attention_states_of_humans_via_an_EEG-based_passive_BCI_using_Machine_Learning_Methods)
 
 

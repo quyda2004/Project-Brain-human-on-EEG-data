@@ -35,10 +35,7 @@
 
 **Cấu trúc dữ liệu:**
 - Dữ liệu thô: Ma trận có kích thước $\{ \text{số mẫu} \} \times 25$.
-- Dữ liệu EEG nằm ở các kênh từ $4$ đến $17$:
-  $$
-  \text{EEG channels} = o.data(:, 4:17)
-  $$
+- Dữ liệu EEG nằm ở các kênh từ $4$ đến $17$
 - Một số kênh không sử dụng như: GYROX, GYROY, TIMESTAMP, MARKER...
 
 ---
@@ -50,6 +47,44 @@
 - Phân loại trạng thái tinh thần (Focus, Unfocus, Drowsy) bằng các mô hình máy học.
 
 ---
+
+## 3) Quy trình
+
+**Dữ liệu:**  
+https://www.kaggle.com/datasets/inancigdem/eeg-data-for-mental-attention-state-detection
+
+---
+<img width="1833" height="575" alt="image" src="https://github.com/user-attachments/assets/ed6ea015-ccf9-4f3b-9b23-45ccc0fb69cb" />
+
+
+
+### Bước 1: Tải dữ liệu
+- Tải dữ liệu từ link trên.
+
+### Bước 2: Tiền xử lý dữ liệu
+- Chọn dữ liệu EEG từ các kênh 4 đến 17.
+- Loại bỏ các kênh không cần thiết như GYROX, TIMESTAMP, MARKER, v.v.
+- Loại bỏ các tần số nhiễu bằng Band pass và Notch.
+
+### Bước 3: Biến đổi tín hiệu
+- Áp dụng Short-Time Fourier Transform (STFT).
+- Chuyển tín hiệu từ miền thời gian sang miền tần số:
+### Bước 4: Tính năng lượng từng băng tần
+- Tính tổng năng lượng trên từng băng tần (Delta, Theta, Alpha, Beta...)
+### Bước 5: Làm mượt tín hiệu (trung bình trượt)
+- Tính trung bình năng lượng theo thời gian
+### Bước 6: Phân loại trạng thái tinh thần
+- Đưa đặc trưng năng lượng vào mô hình phân loại (Random Forest, SVM, CNN).
+- Phân loại 3 trạng thái: Focus, Unfocus, Drowsy.
+
+## 4. Triển khai mô hình.
+### 4.1 SVM:
+<img width="614" height="554" alt="image" src="https://github.com/user-attachments/assets/fe0ab39e-6025-4bdf-9f69-f21a2faea3b9" />
+### 4.2 Random Forest: 
+<img width="595" height="560" alt="image" src="https://github.com/user-attachments/assets/dba42b17-062b-4a6e-b60d-b824b4875bca" />
+### 4.3 CNN:
+<img width="527" height="488" alt="image" src="https://github.com/user-attachments/assets/b8c43909-492c-40de-914a-489cc5df1389" />
+
 
 
 
